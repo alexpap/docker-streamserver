@@ -20,7 +20,13 @@ ENV PATH $PATH:$JAVA_HOME/bin
 # python
 RUN sudo apt-get -y install python python-apsw
 
-# madis
-RUN wget https://github.com/madgik/madis/archive/master.zip
+# stream server
+ADD ExternalServer.tar.gz /root/
 
+#ports
 EXPOSE 8989
+
+# entrypoint
+WORKDIR /root/ExternalServer/
+ENTRYPOINT java -jar ./dist/HttpExternalStreamSource.jar
+
