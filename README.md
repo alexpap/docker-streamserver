@@ -4,14 +4,17 @@
     
 * Running
 
-```
-cd docker-streamserver
-docker build -t streamserver .
-docker run -i -t --rm -P --name streamserver streamserver
-```
+    ```
+    cd docker-streamserver
+    docker build -t streamserver .
+    docker run -i -t --rm -p 8989:8989 --name streamserver streamserver
+    ```
 
+* Access steams http://localhost:8989/measurements 
+  (on linux use locahost, on win/mac use 'docker-machine ip')
+   
 * Access container
 
-```
-docker exec -t -i streamserver /bin/bash
-```
+    ```
+    docker exec -t -i streamserver /bin/bash
+    ```
