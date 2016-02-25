@@ -1,6 +1,6 @@
 # docker-streamserver
 
-* Install  [docker] (https://docs.docker.com/engine/installation/)
+* Install  [docker] (https://docs.docker.com/mac/)
     
 * Running
 
